@@ -1,0 +1,100 @@
+.card-image {
+  width: 100%;
+  height: 172px;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  background-size: cover !important;
+  background-position: 50% 50% !important;
+  background-origin: border-box !important;
+  cursor: pointer;
+}
+
+.title {
+  line-height: 1.1 !important;
+  font-size: 28px !important;
+  font-weight: 600 !important;
+  margin-top: 30px;
+  margin-left: 20px;
+  text-transform: capitalize;
+}
+
+.card-title {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+
+.card-title:first-letter {
+  text-transform: capitalize;
+}
+
+.card-description {
+  line-height: 1.5 !important;
+  font-size: 18px !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  fill: rgba(0, 0, 0, 0.54) !important;
+  margin-top: 10px !important;
+  font-weight: 400 !important;
+}
+
+/* Add some padding inside the card container */
+.container {
+  cursor: pointer;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.grid-item {
+  margin: 10px;
+  font-size: 30px;
+  margin-bottom: 55px;
+}
+
+@media screen and (max-width: 870px) and (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+
+  .card-title {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
+  .card-title {
+    font-size: 20px !important;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
