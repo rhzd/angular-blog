@@ -3,8 +3,28 @@
     {{ posts.title }}
   </h2>
   <div class="center">
-    <img src="https://picsum.photos/200/300" alt="Avatar" class="post-image" />
+    <img
+      src="https://picsum.photos/600/500/?random={{ image }}"
+      alt=""
+      class="post-image"
+    />
     <p class="body-font">{{ posts.body }}</p>
+  </div>
+  <div>Normal power: <input [(ngModel)]="power"></div>
+  <div>Boost factor: <input [(ngModel)]="factor"></div>
+  <p>Super power boost: {{power | filterWord: factor}}</p>
+  <div class="row">
+    <h2 class="comment-title">{{ comments.length }} comments</h2>
+    <p>Search: <input type="search" [(ngModel)]="commentSearch" class="textbox" /></p>
+  </div>
+  <div *ngFor="let c of (comments | filterWord: commentSearch); let i = index" class="comment-section">
+    <div class="comment-email">
+      <p class="text-email">{{ c.email }}</p>
+    </div>
+    <div class="comment-body">
+      <p class="text-name">{{ c.name }}</p>
+      <p class="text-body">{{ c.body }}</p>
+    </div>
   </div>
 </div>
 

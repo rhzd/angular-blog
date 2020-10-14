@@ -33,7 +33,7 @@ export class ApiService {
   }
 
   getPostComment(postId): Observable<any> {
-    return this.http.get(endpoint + '/comments?postId=' + postId).pipe(
+    return this.http.get(endpoint + 'comments?postId=' + postId).pipe(
       map(this.extractData));
   }
 

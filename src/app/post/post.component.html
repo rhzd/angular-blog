@@ -8,10 +8,11 @@
         [routerLink]="['/post-details/', p.id]"
       >
         <img
-          src="https://picsum.photos/200/300?random={{ i }}"
+          src="https://picsum.photos/300/174?random={{ i }}"
           alt="Avatar"
           class="card-image"
         />
+
         <div class="container">
           <b class="card-title">{{ p.title }}</b>
           <p class="card-description">{{ p.body.slice(0, 95) + "..." }}</p>

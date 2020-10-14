@@ -7,11 +7,14 @@ import { PostComponent } from './post/post.component';
 import { FormsModule } from '@angular/forms';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterWord } from '../app/post-details/filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    FilterWord
   ],
   imports: [
     BrowserModule,

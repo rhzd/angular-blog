@@ -8,13 +8,19 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./post-details.component.scss'],
 })
 export class PostDetailsComponent implements OnInit {
-  posts:any = {};
+  posts: any = {};
+  comments: any = [];
 
-  constructor(public api:ApiService, private route: ActivatedRoute, private router: Router) { }
+  constructor(
+    public api: ApiService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.getPost(params.id)
+    this.route.params.subscribe((params) => {
+      this.getPost(params.id);
+      this.getComment(params.id);
     });
   }
 
@@ -23,6 +29,14 @@ export class PostDetailsComponent implements OnInit {
     this.api.getPost(id).subscribe((data: {}) => {
       console.log(data);
       this.posts = data;
+    });
+  }
+
+  getComment(id: string) {
+    this.comments = [];
+    this.api.getPostComment(id).subscribe((data: {}) => {
+      console.log(data);
+      this.comments = data;
     });
   }
 }
