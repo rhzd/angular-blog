@@ -25,7 +25,6 @@
 }
 
 .comment-title {
-  line-height: 60px;
   font-size: 30px;
   color: rgba(41, 41, 41, 1);
   font-style: normal;
@@ -109,6 +108,10 @@
   animation: spin 2s linear infinite;
 }
 
+.textbox {
+  margin-left: 10px;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -118,9 +121,26 @@
   }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 600px) {
   .title {
-    line-height: 40px;
-    font-size: 35px !important;
+    line-height: 35px;
+    font-size: 26px !important;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+  .comment-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0px;
+  }
+  .post-image {
+    margin-bottom: 0px;
+  }
+  .comment-section {
+    margin-top: 20px;
+  }
+  .row {
+    margin-top: 40px;
   }
 }

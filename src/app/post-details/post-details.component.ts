@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-post-details',
@@ -13,8 +13,7 @@ export class PostDetailsComponent implements OnInit {
 
   constructor(
     public api: ApiService,
-    private route: ActivatedRoute,
-    private router: Router
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
@@ -27,7 +26,6 @@ export class PostDetailsComponent implements OnInit {
   getPost(id: string) {
     this.posts = {};
     this.api.getPost(id).subscribe((data: {}) => {
-      console.log(data);
       this.posts = data;
     });
   }
@@ -35,7 +33,6 @@ export class PostDetailsComponent implements OnInit {
   getComment(id: string) {
     this.comments = [];
     this.api.getPostComment(id).subscribe((data: {}) => {
-      console.log(data);
       this.comments = data;
     });
   }

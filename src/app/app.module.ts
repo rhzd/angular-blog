@@ -11,9 +11,9 @@ import { FilterWord } from '../app/post-details/filter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PostComponent,
-    PostDetailsComponent,
+    AppComponent, 
+    PostComponent, 
+    PostDetailsComponent, 
     FilterWord
   ],
   imports: [
@@ -21,9 +21,11 @@ import { FilterWord } from '../app/post-details/filter.pipe';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
 })
-export class AppModule { }
+export class AppModule {}

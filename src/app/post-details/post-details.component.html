@@ -10,12 +10,9 @@
     />
     <p class="body-font">{{ posts.body }}</p>
   </div>
-  <div>Normal power: <input [(ngModel)]="power"></div>
-  <div>Boost factor: <input [(ngModel)]="factor"></div>
-  <p>Super power boost: {{power | filterWord: factor}}</p>
   <div class="row">
     <h2 class="comment-title">{{ comments.length }} comments</h2>
-    <p>Search: <input type="search" [(ngModel)]="commentSearch" class="textbox" /></p>
+    <p class="input-holder">Search:<input type="search" [(ngModel)]="commentSearch" class="textbox" /></p>
   </div>
   <div *ngFor="let c of (comments | filterWord: commentSearch); let i = index" class="comment-section">
     <div class="comment-email">
