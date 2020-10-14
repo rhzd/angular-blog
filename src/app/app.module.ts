@@ -7,20 +7,25 @@ import { PostComponent } from './post/post.component';
 import { FormsModule } from '@angular/forms';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterWord } from '../app/post-details/filter.pipe';
+
 @NgModule({
   declarations: [
-    AppComponent,
-    PostComponent,
-    PostDetailsComponent
+    AppComponent, 
+    PostComponent, 
+    PostDetailsComponent, 
+    FilterWord
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
 })
-export class AppModule { }
+export class AppModule {}

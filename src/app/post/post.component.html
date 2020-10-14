@@ -1,5 +1,5 @@
 <div *ngIf="posts.length > 0; else loader">
-  <h2 class="title">Post List</h2>
+  <h2 class="title">Post</h2>
   <div class="center">
     <div class="grid-container">
       <div
@@ -8,10 +8,11 @@
         [routerLink]="['/post-details/', p.id]"
       >
         <img
-          src="https://picsum.photos/200/300?random={{ i }}"
+          src="https://picsum.photos/300/174?random={{ i }}"
           alt="Avatar"
           class="card-image"
         />
+
         <div class="container">
           <b class="card-title">{{ p.title }}</b>
           <p class="card-description">{{ p.body.slice(0, 95) + "..." }}</p>

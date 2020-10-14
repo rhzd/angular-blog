@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  styleUrls: ['./post.component.scss'],
 })
 export class PostComponent implements OnInit {
+  posts: any = [];
 
-  posts:any = [];
-
-  constructor(public api:ApiService, private route: ActivatedRoute, private router: Router) { }
+  constructor(public api: ApiService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.getAllPosts();
@@ -20,7 +19,6 @@ export class PostComponent implements OnInit {
   getAllPosts() {
     this.posts = [];
     this.api.getAllPost().subscribe((data: {}) => {
-      console.log(data);
       this.posts = data;
     });
   }
